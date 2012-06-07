@@ -41,10 +41,10 @@ namespace FlightsNorway.Lib.Model
 		{
 			if(Direction == Direction.Depature)
 			{
-				return string.Format("Gate {0} - Status: {1}", Gate, FlightStatus.Status.StatusTextNorwegian);
+				return string.Format("Gate {0} - Status: {1}", Gate, FlightStatus.Status.StatusTextEnglish);
 			}
 			
-			return string.Format("Status: {0} - Belt: {1}", FlightStatus.Status.StatusTextNorwegian, Belt);
+			return string.Format("Status: {0} - Belt: {1}", FlightStatus.Status.StatusTextEnglish, Belt);
 		}
 
         public override string ToString()
@@ -64,7 +64,7 @@ namespace FlightsNorway.Lib.Model
 			                     ScheduledTime, 
 			                     Belt, 
 			                     Airport.Name,
-                                 FlightStatus.Status.StatusTextNorwegian, 
+                                 FlightStatus.Status.StatusTextEnglish, 
 			                     FlightStatus.StatusTime);
         }
     }

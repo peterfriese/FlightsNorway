@@ -24,7 +24,7 @@
 				<TextBlock Grid.Column="1" TextWrapping="Wrap" Text="{Binding ScheduledTime, ConverterParameter=HH:mm, Converter={StaticResource StringFormatValueConverter}}" Style="{StaticResource TimeTableContent}" FontFamily="{StaticResource PhoneFontFamilyLight}" FontSize="{StaticResource PhoneFontSizeMedium}" VerticalAlignment="Center"/>
 				<TextBlock Grid.Column="3" Margin="0" TextWrapping="Wrap" Text="{Binding Airport.Name, Converter={StaticResource StringFormatValueConverter}}" Style="{StaticResource TimeTableContent}" FontFamily="{StaticResource PhoneFontFamilyLight}" FontSize="{StaticResource PhoneFontSizeMedium}" VerticalAlignment="Center" />
 				<TextBlock Grid.Column="2" Margin="0" TextWrapping="Wrap" Text="{Binding Belt, Converter={StaticResource StringFormatValueConverter}}" Style="{StaticResource TimeTableContent}" HorizontalAlignment="Left" FontFamily="{StaticResource PhoneFontFamilyLight}" FontSize="{StaticResource PhoneFontSizeMedium}" VerticalAlignment="Center"/>
-				<TextBlock Grid.Column="4" Margin="0,0,0,1" TextWrapping="Wrap" Text="{Binding FlightStatus.Status.StatusTextNorwegian, Converter={StaticResource StringFormatValueConverter}}" Style="{StaticResource TimeTableContent}" FontFamily="{StaticResource PhoneFontFamilyLight}" FontSize="{StaticResource PhoneFontSizeMedium}" VerticalAlignment="Center" />
+				<TextBlock Grid.Column="4" Margin="0,0,0,1" TextWrapping="Wrap" Text="{Binding FlightStatus.Status.StatusTextEnglish, Converter={StaticResource StringFormatValueConverter}}" Style="{StaticResource TimeTableContent}" FontFamily="{StaticResource PhoneFontFamilyLight}" FontSize="{StaticResource PhoneFontSizeMedium}" VerticalAlignment="Center" />
 			</Grid>
 		</DataTemplate>
 	</UserControl.Resources>
@@ -48,11 +48,11 @@
         		<ColumnDefinition Width="134"/>
         		<ColumnDefinition/>
         	</Grid.ColumnDefinitions>
-        	<TextBlock Margin="0" TextWrapping="Wrap" Text="rutenr." Style="{StaticResource TimeTableHeading}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
-        	<TextBlock TextWrapping="Wrap" Text="tid" Style="{StaticResource TimeTableHeading}" Grid.Column="1" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
-        	<TextBlock Margin="0" TextWrapping="Wrap" Text="belte" Style="{StaticResource TimeTableHeading}" Grid.Column="2" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
-        	<TextBlock Margin="0" TextWrapping="Wrap" Text="fra" Style="{StaticResource TimeTableHeading}" Grid.Column="3" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
-        	<TextBlock Margin="0" TextWrapping="Wrap" Text="mrk." Style="{StaticResource TimeTableHeading}" Grid.Column="4" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+        	<TextBlock Margin="0" TextWrapping="Wrap" Text="flight" Style="{StaticResource TimeTableHeading}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+        	<TextBlock TextWrapping="Wrap" Text="time" Style="{StaticResource TimeTableHeading}" Grid.Column="1" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+        	<TextBlock Margin="0" TextWrapping="Wrap" Text="belt" Style="{StaticResource TimeTableHeading}" Grid.Column="2" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+        	<TextBlock Margin="0" TextWrapping="Wrap" Text="from" Style="{StaticResource TimeTableHeading}" Grid.Column="3" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+        	<TextBlock Margin="0" TextWrapping="Wrap" Text="status" Style="{StaticResource TimeTableHeading}" Grid.Column="4" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
         </Grid>
     </Grid>
 </UserControl>

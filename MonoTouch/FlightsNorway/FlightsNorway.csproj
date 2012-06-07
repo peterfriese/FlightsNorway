@@ -6,15 +6,10 @@
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{98C2CB5B-2948-429A-8052-0DE535DD4318}</ProjectGuid>
-    <ProjectTypeGuids>{E613F3A2-FE9C-494F-B74E-F63BCB86FEA6};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>FlightsNorway</RootNamespace>
-    <SupportedDevices>IPhoneAndIPad</SupportedDevices>
-    <MainNibFileIPad>MainWindowIPad.xib</MainNibFileIPad>
-    <MainNibFile>MainWindowIPhone.xib</MainNibFile>
     <AssemblyName>FlightsNorway</AssemblyName>
-    <MtouchMinimumOS>3.0</MtouchMinimumOS>
-    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,12 +21,8 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <MtouchDebug>True</MtouchDebug>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
+    <MtouchDebug>true</MtouchDebug>
     <MtouchUseArmv7>false</MtouchUseArmv7>
-    <MtouchUseThumb>false</MtouchUseThumb>
-    <MtouchUseSGen>false</MtouchUseSGen>
-    <MtouchArch>ARMv6</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -39,14 +30,9 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchDebug>False</MtouchDebug>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
     <MtouchUseArmv7>false</MtouchUseArmv7>
-    <MtouchUseThumb>false</MtouchUseThumb>
-    <MtouchUseSGen>false</MtouchUseSGen>
-    <MtouchArch>ARMv6</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,12 +44,8 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>True</MtouchDebug>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
+    <MtouchDebug>true</MtouchDebug>
     <MtouchUseArmv7>false</MtouchUseArmv7>
-    <MtouchUseThumb>false</MtouchUseThumb>
-    <MtouchUseSGen>false</MtouchUseSGen>
-    <MtouchArch>ARMv6</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -71,14 +53,9 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchDebug>False</MtouchDebug>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
     <MtouchUseArmv7>false</MtouchUseArmv7>
-    <MtouchUseThumb>false</MtouchUseThumb>
-    <MtouchUseSGen>false</MtouchUseSGen>
-    <MtouchArch>ARMv6</MtouchArch>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -105,8 +82,8 @@
     <Compile Include="ContainerConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MainWindowIPhone.xib" />
-    <Page Include="MainWindowIPad.xib" />
+    <InterfaceDefinition Include="MainWindowIPhone.xib" xmlns="" />
+    <InterfaceDefinition Include="MainWindowIPad.xib" xmlns="" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -123,19 +100,18 @@
     <Content Include="Images\Departures%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MonoMobileExtensions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\MonoMobile.Extensions\MonoMobileExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="monotouch" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="MonoMobileExtensions">
+      <HintPath>..\lib\MonoMobile.Extensions\MonoMobileExtensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FlightsNorway.Lib\FlightsNorway.Lib.csproj">
+    <ProjectReference Include="Lib\FlightsNorway.Lib.csproj">
       <Project>{567394A2-886F-4AC9-BC60-89533165FDF7}</Project>
       <Name>FlightsNorway.Lib</Name>
     </ProjectReference>

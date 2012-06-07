@@ -33,7 +33,7 @@
         
         <Button
             Grid.Row="1"
-            Content="Lagre"
+            Content="select"
             MVVM:ButtonBaseExtensions.Command="{Binding Path=SaveCommand}"/>
         
         <Grid Height="36" VerticalAlignment="Top" Margin="14,0,10,0">
@@ -41,8 +41,8 @@
         		<ColumnDefinition Width="125.667"/>
         		<ColumnDefinition Width="330.333"/>
         	</Grid.ColumnDefinitions>
-        	<TextBlock Margin="0,0,0.105,0" TextWrapping="Wrap" Text="kode" Style="{StaticResource TimeTableHeading}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
-        	<TextBlock TextWrapping="Wrap" Text="flyplass" Style="{StaticResource TimeTableHeading}" Grid.Column="1" Margin="-0.105,0,0,0" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+        	<TextBlock Margin="0,0,0.105,0" TextWrapping="Wrap" Text="code" Style="{StaticResource TimeTableHeading}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+        	<TextBlock TextWrapping="Wrap" Text="airport" Style="{StaticResource TimeTableHeading}" Grid.Column="1" Margin="-0.105,0,0,0" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
         </Grid>
         <ListBox Margin="14,40,8,8" ItemsSource="{Binding Airports}" SelectedItem="{Binding SelectedAirport, Mode=TwoWay}" ItemTemplate="{StaticResource AirportItemTemplate}"/>
         

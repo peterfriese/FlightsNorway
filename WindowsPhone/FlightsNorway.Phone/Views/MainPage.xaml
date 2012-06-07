@@ -15,13 +15,13 @@
     <Grid x:Name="LayoutRoot">
         
         <controls:Pivot x:Name="_mainPivot" Title="Flytider">
-        	<controls:PivotItem Header="avgang" x:Name="_departuresPivot">
+        	<controls:PivotItem Header="departure" x:Name="_departuresPivot">
         		<views:DeparturesView x:Name="_departuresView" />
         	</controls:PivotItem>
-        	<controls:PivotItem Header="ankomst" x:Name="_arrivalsPivot">
+        	<controls:PivotItem Header="arrival" x:Name="_arrivalsPivot">
         		<views:ArrivalsView  x:Name="_arrivalsView" />
         	</controls:PivotItem>
-        	<controls:PivotItem Header="velg flyplass" x:Name="_airportsPivot">
+        	<controls:PivotItem Header="airports" x:Name="_airportsPivot">
         		<views:AirportsView x:Name="_airportsView" />
         	</controls:PivotItem>
         </controls:Pivot>
@@ -41,7 +41,7 @@
 
     	<toolkit:PerformanceProgressBar 
             x:Name="_progressBar"
-            IsIndeterminate="True"
+            IsIndeterminate="False"
             Height="13" VerticalAlignment="Top" d:LayoutOverrides="Width" Background="{StaticResource MetroYellow}" Foreground="{StaticResource MetroYellow}"/>
 
     </Grid>
